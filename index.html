@@ -1,19 +1,32 @@
 <style>
- h1 {
-  color: pink; 
-  font-size: 30; 
-  font-weight: bold; 
-  text-decoration: underline;
-  } 
+  /* so we can use ／ and ＼ */
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
+  
+  body {
+    background-color: #0082c8;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 30px;
+    word-wrap: anywhere;
+    font-family: "Noto Serif SC";
+  }
 </style>
 
-<main>
-	<section> 
-		<h1>peepeepoopoo</h1>
-		<h2>by seo</h2>
-		<a href="https://game.granbluefantasy.jp/#quest/assist" target="_blank">wahoo</a>
-		<img src="https://cdn.shoplightspeed.com/shops/625124/files/42758951/1600x2048x2/jellycat-sensational-seafood-shrimp.jpg" alt="sensational seafood shrimp" style="width:500px;height:600px;">
+<body></body> 
 
+<script>
   
-  </section>
-</main>
+  
+  function draw () {
+    const fps = 1000 / 24
+    setTimeout(draw, fps)
+    let ran = Math.random() 
+  if (ran > 0.5) {
+    document.body.innerText += '／'
+  }  else {
+    document.body.innerText += '＼'
+  }
+  }
+	draw()
+  
+</script>
